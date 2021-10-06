@@ -2,14 +2,8 @@
 
 const {Router} = require("express");
 const helloRouter = Router();
-const {listGuitars, addGuitar, deleteGuitar, updateGuitar, listUsers, addUser, updateUser, deleteUser, login, tokenLogin} = require("../guitar/guitar.controllers")
-const {testMiddle, hashPassword, decryptPassword, createToken, decodeToken} = require("../middleware")
-
-helloRouter.get("/guitar", listGuitars);
-helloRouter.post("/guitar", testMiddle, addGuitar);//Note: testMiddle is middleware
-helloRouter.put("/guitar", updateGuitar);
-helloRouter.patch("/guitar", updateGuitar);
-helloRouter.delete("/guitar/:name", deleteGuitar)
+const {listUsers, addUser, updateUser, deleteUser, login, tokenLogin} = require("../guitar/guitar.controllers")
+const {hashPassword, decryptPassword, createToken, decodeToken} = require("../middleware")
 
 helloRouter.get("/user", decodeToken, tokenLogin)
 helloRouter.get("/user/list", listUsers)
