@@ -1,7 +1,7 @@
 //phil welsby - 22 sept 2021 - guitar.controllers.js
 
 const bcrypt = require("bcryptjs/dist/bcrypt");
-const {User} = require("../guitar/guitar.models");
+const {User} = require("../user/user.model");
 
 
 

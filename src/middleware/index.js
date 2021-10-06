@@ -2,7 +2,7 @@
 
 const bcrypt = require("bcryptjs");
 const jwt = require('jsonwebtoken');
-const {User} = require("../guitar/guitar.models");
+const {User} = require("../user/user.model");
 
 //test function
 exports.testMiddle = (req, res, next) => {
