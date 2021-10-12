@@ -3,6 +3,15 @@
 const bcrypt = require("bcryptjs/dist/bcrypt");
 const {User} = require("../user/user.model");
 
+//GET public id     /notifications
+exports.getId = (req, res) => {
+  console.log("hello")
+  try {
+    res.status(200).send("get id here")
+  } catch (error) {
+    res.status(501).send({err: error})
+  }
+}
 
 
   //GET      /user/list

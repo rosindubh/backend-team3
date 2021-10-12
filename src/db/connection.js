@@ -12,6 +12,10 @@ const connection = async () => {
     }
 }
 
+// if (process.env.NODE.ENV === "production"{
+//     mongoose.connect(process.env.DATABASE_URL)
+// })
+
 connection();
 
 
