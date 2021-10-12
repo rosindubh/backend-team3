@@ -16,7 +16,10 @@ const userSchema = mongoose.Schema({
     password: {
         type: String,
         required: true
-    }
+    },
+    notifications: {
+        type: Array,
+    },
 })
 
 const User = mongoose.model("User", userSchema);
