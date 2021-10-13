@@ -18,7 +18,7 @@ const userSchema = mongoose.Schema({
         required: true
     },
     notifications: {
-        type: Array,
+        type: String,
     },
 })
 
