@@ -3,6 +3,13 @@
 const bcrypt = require("bcryptjs/dist/bcrypt");
 const {User} = require("../user/user.model");
 
+  exports.addNotification = async (req, res) => {
+    try {
+      await User.findOneAndUpdate({email: req.body.email}, {$push: {notifications: req.body.secure_url}})
+    } catch (error) {
+      res.status(500).send({ err: error})
+    }
+  }
 
 
   //GET      /user/list
